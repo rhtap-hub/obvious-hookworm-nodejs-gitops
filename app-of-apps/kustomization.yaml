@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: obvious-hookworm-nodejs 
+  janus-idp.io/tekton: obvious-hookworm-nodejs
+  backstage.io/kubernetes-id: obvious-hookworm-nodejs
+  backstage.io/kubernetes-namespace: rhtap-demo 
+  app.kubernetes.io/part-of: obvious-hookworm-nodejs
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
